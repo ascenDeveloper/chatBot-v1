@@ -5,12 +5,16 @@ function ChatButton() {
     const [click, setClick] = useState(false);
 
     const handleClick = () => setClick(!click);
-    const closeChat = () => setClick(false);
+    // const closeChat = () => setClick(false);
 
     return (
         <Container>
-            <button>Chatbot</button>
-            <i className={click ? 'fas fa-bars' : 'chat'} />
+            <div className="chatbot" onClick={handleClick}>
+                <i className={click ? 'chat' : 'fas fa-bars'} />
+            </div>
+            <div className="" onClick={handleClick}>
+
+            </div>
         </Container>
     )
 }
@@ -18,5 +22,14 @@ function ChatButton() {
 export default ChatButton
 
 const Container = styled.div`
-    
+    .chatbot {
+        color: white;
+        width: 1vw;
+        height: 1vh;
+        padding: 1em;
+        background-color: #150910;
+        .chat{
+            display: none;
+        }
+    }
 `
