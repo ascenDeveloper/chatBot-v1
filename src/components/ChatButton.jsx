@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import styled from 'styled-components';
+import Chat from './Chat';
 
 function ChatButton() {
     const [click, setClick] = useState(false);
@@ -10,10 +11,10 @@ function ChatButton() {
     return (
         <Container>
             <div className="chatbot" onClick={handleClick}>
-                <i className={click ? 'chat' : 'fas fa-bars'} />
+                <i className={click ? 'fas fa-times' : 'fas fa-bars'} />
             </div>
-            <div className="" onClick={handleClick}>
-
+            <div className={click ? 'chatMostrar' : 'chatOculto'} onClick={handleClick}>
+                <Chat />
             </div>
         </Container>
     )
@@ -32,4 +33,11 @@ const Container = styled.div`
             display: none;
         }
     }
+    .chatMostrar {
+        display: block;
+    }
+    .chatOculto {
+        display: none;
+    }
+
 `
