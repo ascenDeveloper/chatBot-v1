@@ -18,4 +18,5 @@ const Container = styled.div`
   background: rgb(50,59,66);
   background: linear-gradient(235deg, rgba(50,59,66,1) 0%, rgba(18,19,23,1) 100%);
   position: relative;
+
 `;

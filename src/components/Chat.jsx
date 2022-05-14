@@ -4,7 +4,7 @@ import styled from 'styled-components';
 function Chat() {
     return (
         <Container>
-            <div className='chat-expandido'></div>
+
         </Container>
     )
 }
