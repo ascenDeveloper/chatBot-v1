@@ -1,10 +1,11 @@
 import './App.css';
 import styled from 'styled-components';
+import ChatButton from './components/ChatButton';
 
 function App() {
   return (
     <Container>
-      
+      <ChatButton />
     </Container>
   );
 }
