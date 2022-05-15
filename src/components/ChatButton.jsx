@@ -10,14 +10,14 @@ function ChatButton() {
 
     return (
         <Container>
-            <div className="chatbot" onClick={handleClick}>
-                <div className='chatMostrar' onClick={handleClick} >
+            <div className="chatbot"  >
+                <div className='chatMostrar' >
                     {
                         click ? <Chat /> : undefined
                     }
                 </div>
                 <div className='chat'>
-                    <i className={click ? 'fas fa-times' : 'fas fa-bars'} />
+                    <i className={click ? 'fas fa-times' : 'fas fa-bars'} onClick={handleClick} />
                 </div>
             </div>
 
@@ -30,24 +30,26 @@ export default ChatButton
 const Container = styled.div`
     position: absolute;
     bottom:0;
-    right:0;
-    width: 10%;
-    height: 10%;
+    right: 0;
+    margin: 30px;
+    display:flex;
+    align-items: flex-end;
+    flex-direction: column;
     .chatbot {
-        color: white;
-        width: 1vw;
-        height: 1vh;
-        padding: 1em;
-        display:flex;
+        display: flex;
+        align-items: flex-end;
         flex-direction: column;
+        margin: 15px;
         .chatMostrar {
         display: block;
         width: 20vw;
         height: 30vh;
         }
-        .chatOculto {
-            width: 0px;
-            height: 0px;
+        .chat {
+            color: white;
+            width: 1vw;
+            height: 1vh;
+            padding: 1em;
         }
     }
 
